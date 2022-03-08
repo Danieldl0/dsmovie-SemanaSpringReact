@@ -1,0 +1,10 @@
+.dsmovie-star-container{
+    display: flex;
+    width: 130px;
+    justify-content: space-between;
+}
+
+.dsmovie-star-container svg{
+    width: 22px;
+    height: 21px;
+}

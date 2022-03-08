@@ -1,0 +1,21 @@
+.dsmovie-card-container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding-bottom: 20px;
+}
+
+.dsmovie-card-container h3{
+    margin-top: 10px;
+    margin-bottom: 23px;
+    font-size: 14px;
+    color: #4a4a4a;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+
+

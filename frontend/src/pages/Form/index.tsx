@@ -14,7 +14,7 @@ export function Form(){
     
     return (
         <div className="dsmovie-form-container">
-            <img src={movie1.imagem} alt={movie1.title} />
+            <img className="dsmovie-card-img" src={movie1.imagem} alt={movie1.title} />
             <div className="dsmovie-form-container-bottom">
                 <h3>{movie1.title}</h3>
                 <form className="dsmovie-form-inputs">
