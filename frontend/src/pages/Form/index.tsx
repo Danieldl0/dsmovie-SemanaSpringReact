@@ -33,7 +33,9 @@ export function Form(){
                         </select>
                     </div>
                     <div className="dsmovie-btn-container">
-                        <button className="btn btn-primary dsmovie-btn">Salvar</button>
+                        <Link to="/">
+                            <button className="btn btn-primary dsmovie-btn">Salvar</button>
+                        </Link>
                     </div>
                 </form>
 
