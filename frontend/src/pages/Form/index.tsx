@@ -1,4 +1,5 @@
 import "./style.css";
+import { Link } from "react-router-dom";
 
 export function Form(){
     
@@ -37,7 +38,9 @@ export function Form(){
                 </form>
 
                 <div className="dsmovie-btn-container">
+                    <Link to="/">
                     <button className="btn btn-primary dsmovie-btn"> Cancelar</button>
+                    </Link>
                 </div>
             </div>
         </div>

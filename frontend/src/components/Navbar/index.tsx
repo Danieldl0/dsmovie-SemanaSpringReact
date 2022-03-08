@@ -1,4 +1,4 @@
-import { ReactComponent as GithubLogo } from "assets/img/Vector.svg";
+import { ReactComponent as GithubLogo } from "assets/img/githublogo.svg";
 import "./style.css";
 
 

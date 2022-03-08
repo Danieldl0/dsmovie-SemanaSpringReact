@@ -1,0 +1,42 @@
+.dsmovie-pagination-container{
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+}
+
+
+.dsmovie-pagination-div-btn{
+    display: flex;
+    align-items: center;
+}
+
+.dsmovie-pagination-div-btn p{
+    margin: 0;
+    font-size: 12px;
+    color: var(--color-primary);
+}
+
+.dsmovie-pagination-btn svg {
+    filter: brightness(0) saturate(100%) invert(26%) sepia(19%) saturate(7395%) hue-rotate(234deg) brightness(89%) contrast(92%);
+}
+
+.dsmovie-pagination-btn{
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+}
+
+.dsmovie-pagination-btn:disabled{
+    border-color: #c2c2c2;
+}
+
+.dsmovie-pagination-btn:disabled svg{
+    filter: none;
+}
+
+.dsmovie-btn-flip-horizontal{
+    transform: rotate(180deg);
+}
+
