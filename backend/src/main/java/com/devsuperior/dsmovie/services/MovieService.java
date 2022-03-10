@@ -1,6 +1,5 @@
 package com.devsuperior.dsmovie.services;
 
-import java.util.List;
 
 import com.devsuperior.dsmovie.dto.MovieDTO;
 import com.devsuperior.dsmovie.entities.Movie;
@@ -25,6 +24,7 @@ public class MovieService {
     	return allMovies;
     }
 
+    @Transactional(readOnly = true)
     public MovieDTO findById(Long id){
         Movie res = repository.findById(id).get();
         MovieDTO movie = new MovieDTO(res);
