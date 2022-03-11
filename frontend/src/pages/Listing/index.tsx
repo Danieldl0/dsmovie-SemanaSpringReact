@@ -23,10 +23,9 @@ export function Listing() {
     const [numberPage] = useState(0);
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=12&page=${numberPage}&sort=title`)
+        axios.get(`${BASE_URL}/movies?size=12&page=${numberPage}&sort=id`)
             .then(response => {
                 const data = response.data as MoviePage
-                console.log(response.data);
                 setPage(data);
             })
             .catch(erro => console.log("erro" + erro));
@@ -40,7 +39,7 @@ export function Listing() {
                 <div className="row">
 
                     {page.content.map(movie => ( 
-                        <div key={movie.id} className="col-sm-6 col-md-4 col-xl-3 mb-3" >
+                        <div key={movie.id} className="col-sm-6 col-md-4 col-xl-3 mb-4" >
                             <MovieCard
                                 movie = {movie}
                             />

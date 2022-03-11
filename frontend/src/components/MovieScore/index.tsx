@@ -1,13 +1,20 @@
 import { MovieStar } from "components/MovieStar";
 import "./style.css";
 
-function MovieScore() {
+type Props ={
+    moviescore: number;
+    moviecount: number;
+}
+
+function MovieScore( {moviescore , moviecount}: Props ) {
     return (
 
         <div className="dsmovie-score-container">
-            <p>3.8</p>
-            <MovieStar />
-            <p>13 avaliações</p>
+            <p>{moviescore}</p>
+            <MovieStar 
+                score={moviescore}
+            />
+            <p>{moviecount} Avaliações</p>
         </div>
     );
 
