@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Movie } from "types/typesmovies";
+import "./style.css";
 
 type Props = {
     movie: Movie;
