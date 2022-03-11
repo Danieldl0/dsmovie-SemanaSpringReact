@@ -20,21 +20,31 @@ export function Listing() {
         empty: true,
     });
 
-    const [numberPage] = useState(0);
+    const [numberPage, setNumberPage] = useState(0);
 
     useEffect(() => {
         axios.get(`${BASE_URL}/movies?size=12&page=${numberPage}&sort=id`)
             .then(response => {
-                const data = response.data as MoviePage
+                const data = response.data as MoviePage;
                 setPage(data);
             })
-            .catch(erro => console.log("erro" + erro));
+            .catch(erro => console.log("erro" + erro))
     }, [numberPage]);
 
 
+    const changeNumberPage = (num: number) => {
+        setNumberPage(num)
+    }
+
     return (
         <>
-            <Pagination />
+            <Pagination 
+                first = {page.first}
+                last = {page.last}
+                number = {page.number}
+                totalPages = {page.totalPages}
+                changeNumberPage={changeNumberPage}
+            />
             <div className="container">
                 <div className="row">
 
