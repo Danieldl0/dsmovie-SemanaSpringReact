@@ -17,3 +17,16 @@ a, a:hover{
   text-decoration: none;
   color: unset;
 }
+
+.dsmovie-card-img{
+  width: 100% ;
+  border-radius: 8px 8px 0px 0px;
+}
+
+
+.dsmovie-btn{
+  background-color: var(--color-primary);
+  width: 180px;
+  font-size: 14px;
+  height: 40px;
+}
