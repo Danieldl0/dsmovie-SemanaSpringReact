@@ -1,3 +1,4 @@
+import { isContentEditable } from "@testing-library/user-event/dist/utils";
 import axios from "axios";
 import { MovieCard } from "components/MovieCard";
 import { Pagination } from "components/Pagination"
@@ -22,34 +23,33 @@ export function Listing() {
 
     const [numberPage, setNumberPage] = useState(0);
 
-
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=12&page=${numberPage}`)
+        axios.get(`${BASE_URL}/movies?size=12&page=${numberPage}&sort=title`)
             .then(response => {
                 const data = response.data as MoviePage
                 console.log(response.data);
                 setPage(data);
-                })
+            })
             .catch(erro => console.log("erro" + erro));
-    }, []);
+    }, [numberPage]);
+
 
     return (
         <>
             <Pagination />
             <div className="container">
                 <div className="row">
-                    <div className="col-sm-6 col-md-4 col-xl-3 mb-3" >
-                        <MovieCard />
-                    </div>
-                    <div className="col-sm-6 col-md-4 col-xl-3 mb-3" >
-                        <MovieCard />
-                    </div>
-                    <div className="col-sm-6 col-md-4 col-xl-3 mb-3" >
-                        <MovieCard />
-                    </div>
-                    <div className="col-sm-6 col-md-4 col-xl-3 mb-3" >
-                        <MovieCard />
-                    </div>
+
+                    {page.content.map(movie => ( 
+                        <div key={movie.id} className="col-sm-6 col-md-4 col-xl-3 mb-3" >
+                            <MovieCard
+                                movie = {movie}
+                            />
+                        </div>
+                    ))}
+
+
+
                 </div>
 
             </div>
