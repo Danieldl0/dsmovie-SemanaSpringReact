@@ -1,4 +1,3 @@
-import { isContentEditable } from "@testing-library/user-event/dist/utils";
 import axios from "axios";
 import { MovieCard } from "components/MovieCard";
 import { Pagination } from "components/Pagination"
