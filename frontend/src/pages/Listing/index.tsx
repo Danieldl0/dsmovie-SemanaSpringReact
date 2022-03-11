@@ -20,7 +20,7 @@ export function Listing() {
         empty: true,
     });
 
-    const [numberPage, setNumberPage] = useState(0);
+    const [numberPage] = useState(0);
 
     useEffect(() => {
         axios.get(`${BASE_URL}/movies?size=12&page=${numberPage}&sort=title`)
